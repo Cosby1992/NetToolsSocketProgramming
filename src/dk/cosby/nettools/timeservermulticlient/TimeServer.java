@@ -1,4 +1,4 @@
-package dk.cosby.nettools.Timeserver;
+package dk.cosby.nettools.timeservermulticlient;
 
 import dk.cosby.nettools.AppSettings;
 
@@ -46,11 +46,16 @@ public class TimeServer implements Runnable {
             dis = new DataInputStream(socket.getInputStream());
             oos = new ObjectOutputStream(socket.getOutputStream());
 
+            boolean boo;
+
             while (socket.isConnected()) {
-                boolean boo = dis.readBoolean();
+                boo = dis.readBoolean();
+
+                listenerServer.sendServerMessage("Processing request from client");
 
                 if (boo) {
                     Date date = new Date();
+                    listenerServer.sendServerMessage("Sending date: " + date.toString());
                     oos.writeObject(date);
                     oos.flush();
                 }
@@ -62,7 +67,6 @@ public class TimeServer implements Runnable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
 
     }
 }

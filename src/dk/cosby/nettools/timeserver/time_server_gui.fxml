@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.cosby.nettools.Timeserver.TimeServerGui">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.cosby.nettools.timeserver.TimeServerGui">
    <children>
       <Button fx:id="btn_start_server" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#startServer" text="Start Server" />
       <Button fx:id="btn_start_client" layoutX="419.0" layoutY="361.0" mnemonicParsing="false" onAction="#startClientSendRequest" text="Start client and send request" />

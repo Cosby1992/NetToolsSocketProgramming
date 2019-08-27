@@ -1,4 +1,4 @@
-package dk.cosby.nettools.Timeserver;
+package dk.cosby.nettools.timeserver;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.TextArea;
